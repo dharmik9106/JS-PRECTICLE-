@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1>Product Management System</h1>
+
+  <!-- Form Card -->
+  <div class="card">
+    <h2>Add / Edit Product</h2>
+
+    <div class="form-grid">
+      <input type="text" id="title" placeholder="Product Title" />
+      <input type="number" id="price" placeholder="Price" />
+      <input type="text" id="image" placeholder="Image URL" />
+      <input type="text" id="category" placeholder="Category" />
+    </div>
+
+    <button class="btn primary" onclick="addProduct()">Add Product</button>
+  </div>
+
+  <!-- Controls -->
+  <div class="card">
+    <input type="text" placeholder="Search by title" onkeyup="searchProduct(this.value)" />
+
+    <div class="btn-group">
+      <button class="btn" onclick="sortLowToHigh()">Price Low → High</button>
+      <button class="btn" onclick="sortHighToLow()">Price High → Low</button>
+    </div>
+  </div>
+
+  <!-- Product List -->
+  <div id="productList" class="product-grid"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
